@@ -1,7 +1,7 @@
 // Server Config
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = 3000
 
 // Database Config
 // mongodb+srv://2000testzigma:z9DvzO32ruU1JS38@cluster0.ebu9jsn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -101,6 +101,7 @@ app.get('/api/v1/recent', (req, res) => {
     })
 })
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}...`)
+const server = app.listen(PORT, () => {
+    const { addr, port } = server.address()
+    console.log(`Server is running at https://${a}`)
 })
