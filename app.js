@@ -37,7 +37,7 @@ const apiKey = 'AIzaSyCicc_pSXkowm2I_pk5l6LpHWsUhtMPtwg'
 const imageClient = new googleImages(engineID, apiKey)
 
 app.get('/', (req, res) => {
-    res.send("hello, world!")
+    res.send("To search images: <pre>/api/v1/search-image/</pre> and To get history: <pre>/api/v1/recent</pre>")
 })
 
 app.get('/api/v1/search-image/:target', (req, res) => {
