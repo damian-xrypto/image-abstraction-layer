@@ -1,7 +1,7 @@
 // Server Config
 const express = require('express')
 const app = express()
-const PORT = 3000
+const port = 3000
 
 // Database Config
 // mongodb+srv://2000testzigma:z9DvzO32ruU1JS38@cluster0.ebu9jsn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -79,7 +79,6 @@ app.get('/api/v1/search-image/:target', (req, res) => {
     })
 })
 
-// TODO: this is not working...
 app.get('/api/v1/recent', (req, res) => {
     mongo.connect().then(client => {
         client
@@ -101,7 +100,6 @@ app.get('/api/v1/recent', (req, res) => {
     })
 })
 
-const server = app.listen(PORT, () => {
-    const { addr, port } = server.address()
-    console.log(`Server is running at https://${a}`)
+const server = app.listen(port, () => {
+    console.log(`Server is running on port ${port}...`)
 })
